@@ -1,10 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import { RouterProvider } from 'react-router-dom'
+import { router } from './router/router.tsx'
+import { CssBaseline } from '@mui/material'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
+    <CssBaseline>
+      <RouterProvider router={router} />
+    </CssBaseline>
   </React.StrictMode>,
 )
