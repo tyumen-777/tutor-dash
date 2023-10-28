@@ -1,5 +1,5 @@
 export const MainScreen = () => {
   return (
-    <div>MainScreen</div>
+    <div style={{ backgroundColor: 'white', height: '100%' }}>MainScreen</div>
   )
 }

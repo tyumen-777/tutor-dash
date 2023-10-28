@@ -1,23 +1,23 @@
 import { Outlet } from "react-router-dom"
-import { Header } from "../components/Header"
+import { Header } from "../components/Header/Header"
 import { Sidebar } from "../components/Sidebar/Sidebar"
-import { css } from '@emotion/react'
+import { Layout } from "antd"
+import Sider from "antd/es/layout/Sider"
+import { Content } from "antd/es/layout/layout"
 
 
-export const Layout = () => {
+export const MainLayout = () => {
+
+  // Render
   return (
-    <>
-    <Header/>
-    <div css={styles.main}>
-        <Sidebar/>
-        <Outlet/>
-    </div>
-    </>
+    <Layout style={{ minHeight: '100vh' }}>
+      <Header />
+      <Layout hasSider>
+        <Sider><Sidebar /></Sider>
+        <Content style={{ padding: 24 }}>
+          <Outlet />
+        </Content>
+      </Layout>
+    </Layout>
   )
-}
-
-const styles = {
-  main: css({
-      display: 'flex'
-  })
 }
