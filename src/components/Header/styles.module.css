@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+
+    height: 64px;
+    align-items: center;
+    padding: 10px 24px;
+    background-color: white;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+    align-items: center;
+}
